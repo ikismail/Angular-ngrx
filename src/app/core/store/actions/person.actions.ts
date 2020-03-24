@@ -11,6 +11,7 @@ export class LoadPersons implements Action {
   readonly type = PersonActionTypes.LoadPersons;
 }
 
+// tslint:disable-next-line:class-name
 export class isPersonLoading implements Action {
   readonly type = PersonActionTypes.isPersonLoading;
   constructor(

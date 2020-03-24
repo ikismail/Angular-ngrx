@@ -11,7 +11,8 @@ const routes: Routes = [
     children: [
       {
         path: "",
-        loadChildren: "../views/home/home.module#HomeModule"
+        loadChildren: () =>
+          import("../views/home/home.module").then(m => m.HomeModule)
       }
     ]
   }

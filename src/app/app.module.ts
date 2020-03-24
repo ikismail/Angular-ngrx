@@ -5,7 +5,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
-import { NgRedux, NgReduxModule } from "@angular-redux/store";
+// import { NgRedux, NgReduxModule } from "@angular-redux/store";
 import { StoreModule } from "@ngrx/store";
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
 import { environment } from "../environments/environment";
@@ -18,7 +18,7 @@ import { EffectsModule } from "@ngrx/effects";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgReduxModule,
+    // NgReduxModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot([]),
     !environment.production ? StoreDevtoolsModule.instrument() : []

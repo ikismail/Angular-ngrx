@@ -5,17 +5,14 @@ import { Person } from "../models/Person";
 
 export const selectPersonState = createFeatureSelector<PersonState>("persons");
 
-export const selectPersons = createSelector(
-  selectPersonState,
-  personState => {
-    const items: Person[] = [];
-    each(personState.entities, person => {
-      items.push(person);
-    });
+export const selectPersons = createSelector(selectPersonState, personState => {
+  const items: Person[] = [];
+  each(personState.entities, (person: Person) => {
+    items.push(person);
+  });
 
-    return items;
-  }
-);
+  return items;
+});
 
 export const {
   selectAll,
